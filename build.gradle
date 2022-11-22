@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'ml.luxinfine'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
+    implementation 'org.javacord:javacord:3.5.0'
+    implementation group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
+}
